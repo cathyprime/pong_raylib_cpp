@@ -1,7 +1,6 @@
 BasedOnStyle: LLVM
 
 AlignAfterOpenBracket: Align
-AlignArrayOfStructures: Left
 AlignConsecutiveAssignments: None
 AlignOperands: AlignAfterOperator
 AllowShortBlocksOnASingleLine: Always
@@ -27,6 +26,7 @@ BraceWrapping:
 BreakBeforeBinaryOperators: true
 BreakBeforeBraces: Custom
 BreakBeforeConceptDeclarations: Always
+BreakConstructorInitializers: BeforeComma
 ColumnLimit: 120
 CompactNamespaces: true
 DerivePointerAlignment: false
