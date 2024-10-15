@@ -3,11 +3,11 @@
 
 #include "paddle.hh"
 
-Paddle::Paddle(int speed, const Vector2E<int>& keys, const Vector2E<float>& size, const Vector2E<float>& position)
-	: m_keys(std::move(keys))
-	, speed(speed)
-	, m_size(std::move(size))
-	, position(std::move(position))
+Paddle::Paddle(int speed, const Vector2E<int>& keys, const Vector2E<int>& size, const Vector2E<int>& position)
+  : speed(speed)
+    , m_keys(std::move(keys))
+    , m_size(std::move(size))
+    , position(std::move(position))
 {}
 
 Paddle& Paddle::draw()
@@ -35,5 +35,10 @@ Paddle& Paddle::update()
 
 Paddle::operator Rectangle()
 {
-	return Rectangle{position.x, position.y, m_size.x, m_size.y};
+	return Rectangle{
+	  static_cast<float>(position.x),
+	  static_cast<float>(position.y),
+	  static_cast<float>(m_size.x),
+	  static_cast<float>(m_size.y)
+	};
 }

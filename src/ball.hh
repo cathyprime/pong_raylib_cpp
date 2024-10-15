@@ -2,7 +2,6 @@
 #include <raylib.h>
 
 #include "vector2.hh"
-#include "property.hh"
 
 class Ball
 {
